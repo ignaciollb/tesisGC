@@ -7,12 +7,13 @@ function guardar(req, res) {
     let user = new User()
     user.email = req.body.email
     user.password = req.body.password
+    user.nombre_establecimiento = req.body.nombre
 
-    user.save((err, autorStore) => {
+    user.save((err, userStore) => {
 
         if (err) res.status(500).send(`Error base de datos> ${err}`)
 
-        res.status(200).send({ user: autorStore })
+        res.status(200).send({ user: userStore })
     })
 }
 function modificar(req, res) {
