@@ -1,18 +1,20 @@
 'use strict'
-const express = require('express')
-const app = express()
-const mongoose = require('mongoose')
+const express = require('express');
+const bodyParser = require('body-parser');
+const app = express();
+const mongoose = require('mongoose');
 
-// app.get('/', (req, res) => {
-//   res.send('Hello World!')
-// })
+var cors = require('cors');
+app.use(cors());
+app.options('*', cors());
 
-// app.listen(port, () => {
-//   console.log(`Example app listening at http://localhost:${port}`)
-// })
+var user_routes = require('./routes/userRoute');
 
 
-//String conexion BD 
+app.use(bodyParser.json())
+app.use('/api', user_routes);
+
+
 mongoose.connect('mongodb+srv://ignaciollb:123@cluster0.gmmvc.mongodb.net/TesisGC?retryWrites=true&w=majority', (err, res) => {
     
 if(err){
