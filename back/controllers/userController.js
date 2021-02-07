@@ -1,26 +1,22 @@
-'use strict'
+"use strict";
 
 // AQUI Cargamos el modelo para usarlo posteriormente en la siguiente clase
-var User = require('../modelos/user.js');
-var bcrypt = require("bcrypt")
-let hola = ""
-async function guardar(req, res) {
-    let user = new User()
-    user.email = req.body.email
-    //encriptar al implementar login
-    bcrypt.hash(req.body.password, 10, (err, hash) => {
-        hola = hola+hash
-        user.password = hola
-      });
-    
-    user.nombre_establecimiento = req.body.nombre_establecimiento
+var User = require("../modelos/user.js");
+var bcrypt = require("bcrypt");
+let hola = "";
+function guardar(req, res) {
+  let user = new User();
+  user.email = req.body.email;
 
-    user.save((err, userStore) => {
+  user.password = req.body.password;
 
-        if (err) res.status(500).send(`Error base de datos> ${err}`)
+  user.nombre_establecimiento = req.body.nombre_establecimiento;
 
-        res.status(200).send({ user: userStore })
-    })
+  user.save((err, userStore) => {
+    if (err) res.status(500).send(`Error base de datos> ${err}`);
+
+    res.status(200).send({ user: userStore });
+  });
 }
 
 // function modificar(req, res) {
@@ -34,7 +30,7 @@ async function guardar(req, res) {
 //         if (err) {
 //           res.send(err);
 //         } else {
-       
+
 //             res.status(200).send({mensaje:"Modificado"})
 //         }
 //       });
@@ -46,7 +42,7 @@ async function guardar(req, res) {
 //         if (err) {
 //           res.send(err);
 //         } else {
-       
+
 //             res.status(200).send({mensaje:"Eliminado"})
 //         }
 //       });
@@ -60,11 +56,10 @@ async function guardar(req, res) {
 //          res.status(200).send({user})
 //      })
 // }
- 
+
 module.exports = {
-    guardar
-    // todos,
-    // modificar,
-    // eliminar
-    
+  guardar,
+  // todos,
+  // modificar,
+  // eliminar
 };
