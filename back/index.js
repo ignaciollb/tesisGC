@@ -3,15 +3,20 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const app = express();
 const mongoose = require('mongoose');
+const passport = require('passport');
+const session = require('express-session')
+
 
 var cors = require('cors');
 app.use(cors());
 app.options('*', cors());
 
 var user_routes = require('./routes/userRoute');
-
-
-app.use(bodyParser.json())
+app.use(session({ secret: "cats" }));
+app.use(passport.initialize());
+app.use(passport.session());
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({extended:true}));
 app.use('/api', user_routes);
 
 
