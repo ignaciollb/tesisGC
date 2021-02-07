@@ -1,7 +1,7 @@
-'use strict'
-const express = require('express');
-const bodyParser = require('body-parser');
+"use strict";
+const express = require("express");
 const app = express();
+
 const mongoose = require('mongoose');
 const passport = require('passport');
 const session = require('express-session')
@@ -30,7 +30,5 @@ if(err){
 
             console.log("Esta corriendo en puerto 9000")
         })
-    }
-})
 
-//comentario random sdadasd
+//comentario random sdasd
