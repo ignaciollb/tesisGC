@@ -9,10 +9,11 @@ var procesoController = require("../controllers/procesoController");
 // Llamamos al router
 var api = express.Router();
 
-//  Guardar Persona
+//  Guardar proceso
 api.post("/proceso", procesoController.guardar);
 api.put("/proceso/:id", procesoController.modificar);
 api.delete("/proceso/:id", procesoController.eliminar);
+api.get("/proceso", proceso.listar);
 
 // api.post('/autoguardar',autoController.guardar);
 
