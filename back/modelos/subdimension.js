@@ -5,7 +5,7 @@ const SubdimensionSchema = Schema({
   nombre_subdimension: String,
   estandares: [{
     descripcion: String,
-    preguntas: Array
+    preguntas: Number
   }],
   
 });
