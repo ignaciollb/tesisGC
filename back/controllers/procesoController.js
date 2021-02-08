@@ -1,14 +1,15 @@
 "use strict";
 //AQUI Cargamos el modelo para usarlo posteriormente en la siguiente clase
 var Proceso = require("../modelos/proceso.js");
-var Estandar = require("../modelos/estandar.js");
+var Subdimension = require("../modelos/subdimension.js");
 var User = require("../modelos/user.js");
 
 function guardar(req, res) {
   let proceso = new Proceso();
 
   proceso.user = req.body.idUser;
-  proceso.estandar = req.body.idStandar;
+  proceso.subdimension = req.body.idSubdimension;
+  proceso.estandar = req.body.estandar;
   proceso.descripcion = req.body.descripcion;
   proceso.errores_comunes = req.body.errores_comunes;
   proceso.soluciones = req.body.soluciones;
@@ -30,7 +31,8 @@ function modificar(req, res) {
     { _id: req.params.id },
     {
       user: req.body.idUser,
-      estandar: req.body.idStandar,
+      subdimension: req.body.idStandar,
+      estandar: req.body.estandar,
       descripcion: req.body.descripcion,
       errores_comunes: req.body.errores_comunes,
       soluciones: req.body.soluciones,
@@ -47,11 +49,10 @@ function modificar(req, res) {
     }
   );
 }
-//idk
+
 function listar(req, res) {
   Proceso.find({ user: req.params.id })
-    .populate("libro")
-    .populate("persona")
+    .populate("subdimension")
     .exec((err, resultado) => {
       res.status(200).send({ resultado });
     });
@@ -71,5 +72,5 @@ module.exports = {
   guardar,
   modificar,
   eliminar,
-  listar
+  listar,
 };
