@@ -1,6 +1,7 @@
-'use strict'
+"use strict";
 
 // AQUI Cargamos el modelo para usarlo posteriormente en la siguiente clase
+
 var User = require('../modelos/user.js');
 const passport = require('passport')
 function guardar(req, res) {
@@ -15,10 +16,14 @@ function guardar(req, res) {
     })
     user.save((err, userStore) => {
 
-        if (err) res.status(500).send(`Error base de datos> ${err}`)
 
-        res.status(200).send({ user: userStore })
-    })
+  user.nombre_establecimiento = req.body.nombre_establecimiento;
+
+  user.save((err, userStore) => {
+    if (err) res.status(500).send(`Error base de datos> ${err}`);
+
+    res.status(200).send({ user: userStore });
+  });
 }
 
 // exports.postLogin = (req,res,next)=>{
@@ -78,7 +83,7 @@ function logout(req,res){
 //         if (err) {
 //           res.send(err);
 //         } else {
-       
+
 //             res.status(200).send({mensaje:"Modificado"})
 //         }
 //       });
@@ -90,7 +95,7 @@ function logout(req,res){
 //         if (err) {
 //           res.send(err);
 //         } else {
-       
+
 //             res.status(200).send({mensaje:"Eliminado"})
 //         }
 //       });
@@ -104,13 +109,14 @@ function logout(req,res){
 //          res.status(200).send({user})
 //      })
 // }
- 
+
 module.exports = {
+
     guardar,
     postLogin,
     logout
     // todos,
     // modificar,
     // eliminar
-    
+
 };
