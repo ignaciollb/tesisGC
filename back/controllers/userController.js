@@ -2,23 +2,18 @@
 
 // AQUI Cargamos el modelo para usarlo posteriormente en la siguiente clase
 
-var User = require('../modelos/user.js');
-const passport = require('passport')
+var User = require("../modelos/user.js");
+const passport = require("passport");
 function guardar(req, res) {
-    let user = new User()
-    user.email = req.body.email
-    user.password = req.body.password
-    user.nombre_establecimiento = req.body.nombre_establecimiento
-    User.findOne({email: req.body.email}, (err,usuarioExistente)=>{
-        if(usuarioExistente){
-            return res.status(400).send('Email ya registrado')
-        }
-    })
-    user.save((err, userStore) => {
-
-
+  let user = new User();
+  user.email = req.body.email;
+  user.password = req.body.password;
   user.nombre_establecimiento = req.body.nombre_establecimiento;
-
+  User.findOne({ email: req.body.email }, (err, usuarioExistente) => {
+    if (usuarioExistente) {
+      return res.status(400).send("Email ya registrado");
+    }
+  });
   user.save((err, userStore) => {
     if (err) res.status(500).send(`Error base de datos> ${err}`);
 
@@ -44,28 +39,27 @@ function guardar(req, res) {
 //     })(req,res,next);
 // }
 
-function postLogin(req,res,next){
-    passport.authenticate('local',function(err,usuario,info){
-        if(err){
-            return next(err)
-        }
-        if(!usuario){
-            return res.status(400).send('Email o contraseña no válidos');
-        }
-        req.logIn(usuario,function(err){
-            if(err){
-                return next(err);
-            }
-            
-            return res.send('Login exitoso')
-        })
-    })(req,res,next);
+function postLogin(req, res, next) {
+  passport.authenticate("local", function (err, usuario, info) {
+    if (err) {
+      return next(err);
+    }
+    if (!usuario) {
+      return res.status(400).send("Email o contraseña no válidos");
+    }
+    req.logIn(usuario, function (err) {
+      if (err) {
+        return next(err);
+      }
+
+      return res.send("Login exitoso");
+    });
+  })(req, res, next);
 }
 
-
-function logout(req,res){
-    req.logout();
-    res.send('Logout exitoso')
+function logout(req, res) {
+  req.logout();
+  res.send("Logout exitoso");
 }
 
 // exports.logout = (req,res)=>{
@@ -111,12 +105,10 @@ function logout(req,res){
 // }
 
 module.exports = {
-
-    guardar,
-    postLogin,
-    logout
-    // todos,
-    // modificar,
-    // eliminar
-
+  guardar,
+  postLogin,
+  logout,
+  // todos,
+  // modificar,
+  // eliminar
 };
