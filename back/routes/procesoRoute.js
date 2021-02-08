@@ -13,7 +13,7 @@ var api = express.Router();
 api.post("/proceso", procesoController.guardar);
 api.put("/proceso/:id", procesoController.modificar);
 api.delete("/proceso/:id", procesoController.eliminar);
-api.get("/proceso", proceso.listar);
+api.get("/proceso", procesoController.listar);
 
 // api.post('/autoguardar',autoController.guardar);
 

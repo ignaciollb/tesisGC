@@ -13,4 +13,4 @@ const ProcesoSchema = Schema({
   documentos: String,
 });
 
-module.exports = mongoose.model("user", ProcesoSchema);
+module.exports = mongoose.model("proceso", ProcesoSchema);

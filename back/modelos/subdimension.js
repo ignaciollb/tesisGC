@@ -11,4 +11,4 @@ const SubdimensionSchema = Schema({
   ],
 });
 
-module.exports = mongoose.model("user", SubdimensionSchema);
+module.exports = mongoose.model("subdimension", SubdimensionSchema);
