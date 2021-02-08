@@ -8,7 +8,7 @@ const ProcesoSchema = Schema({
   descripcion: String,
   errores_comunes: String,
   soluciones: String,
-  nivel_desarrollo: Number,
+  nivel_desarrollo: Array,
   fecha: Date,
   documentos: String,
 });
