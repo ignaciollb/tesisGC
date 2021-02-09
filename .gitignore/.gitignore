@@ -120,8 +120,9 @@ dist
 .DS_*
 **/*.backup.*
 **/*.back.*
+.eslintcache
 
-node_modules
+node_modules/
 
 *.sublime*
 
