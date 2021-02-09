@@ -1,3 +1,4 @@
+
 'use strict'
 const passportConfig = require('../config/passport')
 // Cargamos el módulo de express para poder crear rutas
