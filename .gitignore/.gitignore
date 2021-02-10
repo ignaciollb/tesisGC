@@ -121,8 +121,6 @@ dist
 **/*.backup.*
 **/*.back.*
 front/.eslintcache
-
-node_modules/
 front/node_modules/
 *.sublime*
 
