@@ -13,6 +13,7 @@ import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
 import { useForm, Controller } from 'react-hook-form';
 import axios from 'axios';
+import { Redirect } from 'react-router-dom';
 
 function Copyright() {
   return (
@@ -68,14 +69,16 @@ export default function SignInSide() {
     axios
         .post("http://localhost:9000/api/login", {
             email:data.email,
-            password:data.password
-        })
+            password:data.password,
+        },
+        {
+          withCredentials: true
+        }
+        )
         .then(
           (response) => {
-             console.log(response.data);
-            
               if(response.data=='Login exitoso'){
-                alert("Se logueo")
+                window.location='/menu'
               }
           }
          
@@ -87,7 +90,6 @@ export default function SignInSide() {
                     let motivo= err.response.data;
                     alert(`No autorizado:${motivo}`)
                 }
-                console.log(err.response.data.mensaje)
               } else if (err.request) {
                 // client never received a response, or request never left
               } else {
@@ -98,6 +100,25 @@ export default function SignInSide() {
 
 
   }
+
+  const info = data => {axios.
+  get("http://localhost:9000/api/usuarioInfo",{withCredentials:true})
+  .then(
+    (response) =>{
+      console.log(response.data);
+    }
+  )}
+
+  const getUser = ()=>{
+    axios({
+      method: "GET",
+      withCredentials: true,
+      url: "http://localhost:9000/api/usuarioInfo",
+    }).then((res) => {
+      console.log(res.data);
+    })
+  }
+
 
   return (
     <Grid container component="main" className={classes.root}>
