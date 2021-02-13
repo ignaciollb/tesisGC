@@ -1,4 +1,3 @@
-import React from 'react';
 import Avatar from '@material-ui/core/Avatar';
 import Button from '@material-ui/core/Button';
 import CssBaseline from '@material-ui/core/CssBaseline';
@@ -12,6 +11,9 @@ import Grid from '@material-ui/core/Grid';
 import LockOutlinedIcon from '@material-ui/icons/LockOutlined';
 import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
+import { useForm, Controller } from 'react-hook-form';
+import axios from 'axios';
+import { Redirect } from 'react-router-dom';
 
 function Copyright() {
   return (
@@ -25,6 +27,8 @@ function Copyright() {
     </Typography>
   );
 }
+
+
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -59,6 +63,62 @@ const useStyles = makeStyles((theme) => ({
 
 export default function SignInSide() {
   const classes = useStyles();
+  const {register, handleSubmit, control} = useForm()
+
+  const Login = data =>{
+    axios
+        .post("http://localhost:9000/api/login", {
+            email:data.email,
+            password:data.password,
+        },
+        {
+          withCredentials: true
+        }
+        )
+        .then(
+          (response) => {
+              if(response.data=='Login exitoso'){
+                window.location='/menu'
+              }
+          }
+         
+        )
+        .catch((err) => {
+  
+            if (err.response) {
+                if(err.response.status==400){
+                    let motivo= err.response.data;
+                    alert(`No autorizado:${motivo}`)
+                }
+              } else if (err.request) {
+                // client never received a response, or request never left
+              } else {
+                // anything else
+              }
+    
+        });
+
+
+  }
+
+  const info = data => {axios.
+  get("http://localhost:9000/api/usuarioInfo",{withCredentials:true})
+  .then(
+    (response) =>{
+      console.log(response.data);
+    }
+  )}
+
+  const getUser = ()=>{
+    axios({
+      method: "GET",
+      withCredentials: true,
+      url: "http://localhost:9000/api/usuarioInfo",
+    }).then((res) => {
+      console.log(res.data);
+    })
+  }
+
 
   return (
     <Grid container component="main" className={classes.root}>
@@ -72,7 +132,7 @@ export default function SignInSide() {
           <Typography component="h1" variant="h5">
             Sign in
           </Typography>
-          <form className={classes.form} noValidate>
+          <form className={classes.form} onSubmit={handleSubmit(Login)}>
             <TextField
               variant="outlined"
               margin="normal"
@@ -83,6 +143,7 @@ export default function SignInSide() {
               name="email"
               autoComplete="email"
               autoFocus
+              inputRef = {register}
             />
             <TextField
               variant="outlined"
@@ -94,17 +155,18 @@ export default function SignInSide() {
               type="password"
               id="password"
               autoComplete="current-password"
+              inputRef = {register}
+
             />
             <FormControlLabel
-              control={<Checkbox value="remember" color="primary" />}
-              label="Remember me"
+              control={<Checkbox inputRef={register} name ="remember" color="primary" defaultValue= {false} />}
+              label="Remember me" 
             />
             <Button
               type="submit"
               fullWidth
               variant="contained"
               color="primary"
-              className={classes.submit}
             >
               Sign In
             </Button>

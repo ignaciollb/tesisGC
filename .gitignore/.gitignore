@@ -43,8 +43,8 @@ bower_components
 build/Release
 
 # Dependency directories
-node_modules/
-jspm_packages/
+back/node_modules/
+back/jspm_packages/
 
 # TypeScript v1 declaration files
 typings/
@@ -120,10 +120,8 @@ dist
 .DS_*
 **/*.backup.*
 **/*.back.*
-.eslintcache
-
-node_modules/
-
+front/.eslintcache
+front/node_modules/
 *.sublime*
 
 psd
