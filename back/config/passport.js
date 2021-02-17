@@ -37,3 +37,11 @@ exports.estaAutenticado = (req, res, next) => {
     }
     res.status(401).send('Tienes que hacer login')
 }
+
+exports.isLogued = (req, res, next) => {
+    if (req.isAuthenticated()){
+        res.send(true)
+        return next()
+    }
+    res.send(false)
+}
