@@ -11,9 +11,8 @@ import Grid from '@material-ui/core/Grid';
 import LockOutlinedIcon from '@material-ui/icons/LockOutlined';
 import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
-import { useForm, Controller } from 'react-hook-form';
+import { useForm } from 'react-hook-form';
 import axios from 'axios';
-import { Redirect } from 'react-router-dom';
 
 function Copyright() {
   return (
@@ -27,7 +26,6 @@ function Copyright() {
     </Typography>
   );
 }
-
 
 
 const useStyles = makeStyles((theme) => ({
@@ -78,6 +76,7 @@ export default function SignInSide() {
         .then(
           (response) => {
               if(response.data=='Login exitoso'){
+                localStorage.setItem('flag','true')
                 window.location='/menu'
               }
           }
@@ -109,15 +108,7 @@ export default function SignInSide() {
     }
   )}
 
-  const getUser = ()=>{
-    axios({
-      method: "GET",
-      withCredentials: true,
-      url: "http://localhost:9000/api/usuarioInfo",
-    }).then((res) => {
-      console.log(res.data);
-    })
-  }
+
 
 
   return (
@@ -130,7 +121,7 @@ export default function SignInSide() {
             <LockOutlinedIcon />
           </Avatar>
           <Typography component="h1" variant="h5">
-            Sign in
+            Inicia sesión
           </Typography>
           <form className={classes.form} onSubmit={handleSubmit(Login)}>
             <TextField
@@ -168,7 +159,7 @@ export default function SignInSide() {
               variant="contained"
               color="primary"
             >
-              Sign In
+              Iniciar sesión
             </Button>
             <Grid container>
               <Grid item xs>

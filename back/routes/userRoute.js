@@ -20,6 +20,7 @@ api.post('/logout', passportConfig.estaAutenticado,userController.logout)
 api.get('/usuarioInfo', passportConfig.estaAutenticado,(req,res)=>{
     res.json(req.user);
 })
+api.get('/isLogued',passportConfig.isLogued)
 
 // api.post('/autoguardar',autoController.guardar);
 
