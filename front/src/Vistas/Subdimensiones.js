@@ -8,8 +8,45 @@ import IconButton from "@material-ui/core/IconButton";
 import MenuIcon from "@material-ui/icons/Menu";
 import Paper from "@material-ui/core/Paper";
 import Grid from "@material-ui/core/Grid";
-import axios from 'axios'
+import PGR from "./PGR";
+import Footer from "./Footer";
 
+const mainFeaturedPost1 = {
+  title: "Planificación y Gestión de Resultados (PGR)",
+  description:
+    "La subdimensión Planificación y Gestión de Resultados describe procedimientos y prácticas esenciales para el liderazgo y la conducción educativa. Los estándares establecen la importancia de planificar los grandes lineamientos del establecimiento y de plasmarlos en el Proyecto Educativo Institucional, así como también de diseñar el plan de mejoramiento, el cual articula el diagnóstico de la institución y las metas, acciones y medios para lograr los objetivos propuestos. Asimismo, esta subdimensión releva la recopilación, el análisis y el uso sistemático de datos como herramientas necesarias para la toma de decisiones educativas y el monitoreo de la gestión del establecimiento.",
+  image: "https://source.unsplash.com/random",
+  imgText: "main image description",
+  linkText: "Continue reading…",
+};
+const mainFeaturedPost2 = {
+  title: "Gestión de Personal (GP)",
+  description:
+    "La subdimensión Gestión de Personal describe las políticas, procedimientos y prácticas que implementa el establecimiento para contar con un equipo calificado y motivado, y con un clima laboral positivo. Los estándares determinan que la gestión del personal debe considerar las prioridades del Proyecto Educativo Institucional, las necesidades pedagógicas del establecimiento y la normativa vigente",
+  image: "https://source.unsplash.com/random",
+
+  imgText: "main image description",
+  linkText: "Ver estandares",
+};
+const mainFeaturedPost3 = {
+  title: "Gestión de Recursos Financieros (GRF)",
+  description:
+    "La subdimensión Gestión de Recursos Financieros describe las políticas y procedimientos implementados por el establecimiento para asegurar una administración ordenada y eficiente de todos los aspectos ligados a los recursos económicos de la institución y de las oportunidades provenientes de los programas de apoyo, alianzas y redes. Los estándares tienen por objetivo asegurar la sustentabilidad del proyecto, lo cual implica el uso eficiente y responsable de los recursos recibidos, el cumplimiento de la normativa y la obtención de beneficios provistos por los programas de apoyo disponibles y las redes existentes.",
+  image: "https://source.unsplash.com/random",
+
+  imgText: "main image description",
+  linkText: "Ver estandares",
+};
+const mainFeaturedPost4 = {
+  title: "Gestión de Recursos Educativos  (GRE)",
+  description:
+    "La subdimensión Gestión de Recursos Educativos describe los procedimientos y prácticas que implementa el establecimiento para garantizar la adecuada provisión, organización y uso de los recursos educativos. Los estándares definen las condiciones, instalaciones y equipamientos necesarios para promover el bienestar de los estudiantes y potenciar su aprendizaje.",
+  image: "https://source.unsplash.com/random",
+
+  imgText: "main image description",
+  linkText: "Ver estandares",
+  link: "'/Estandares'",
+};
 const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
@@ -24,6 +61,10 @@ const useStyles = makeStyles((theme) => ({
   menu: {
     backgroundColor: "",
     color: "",
+    position: "fixed",
+    left: 0,
+    right: 0,
+    top: 0,
   },
   paper: {
     padding: theme.spacing(2),
@@ -44,27 +85,6 @@ const useStyles = makeStyles((theme) => ({
 export default function Subdimensiones(props) {
   const classes = useStyles();
   const { title } = props;
-  function logOut(){
-    axios.post("http://localhost:9000/api/logout",{} ,{withCredentials:true})
-    .then(res=>{
-      if(res.data == "Logout exitoso"){
-        localStorage.setItem('flag','false')
-        window.location='/'
-      }
-    })  
-    .catch(err=>{
-      alert("Error, intente nuevamente")
-      console.log(err);
-    })
-  }
-
-  // const info = data => {axios.
-  //   get("http://localhost:9000/api/usuarioInfo",{withCredentials:true})
-  //   .then(
-  //     (response) =>{
-  //       console.log(response.data);
-  //     }
-  //   )}
 
   return (
     <div className={classes.root}>
@@ -76,91 +96,22 @@ export default function Subdimensiones(props) {
           <Typography variant="h6" align="left" className={classes.title}>
             {title}
           </Typography>
-          <Button color="inherit" className={classes.Nav_Button} onClick ={logOut}>
+          <Button color="inherit" className={classes.Nav_Button}>
             Logout
           </Button>
         </Toolbar>
       </AppBar>
-      <Grid container spacing={3}>
-        <Grid item xs={6}>
-          <Paper className={classes.paper}>
-            <img src="https://ruizhealytimes.com/wp-content/uploads/2018/08/gestion-conocimiento.png"></img>
-          </Paper>
-        </Grid>
-        <Grid item xs={6}>
-          <Paper className={classes.paper}>
-            ¿Por qué lo usamos? Es un hecho establecido hace demasiado tiempo
-            que un lector se distraerá con el contenido del texto de un sitio
-            mientras que mira su diseño. El punto de usar Lorem Ipsum es que
-            tiene una distribución más o menos normal de las letras, al
-            contrario de usar textos como por ejemplo "Contenido aquí, contenido
-            aquí". Estos textos hacen parecerlo un español que se puede leer.
-            Muchos paquetes de autoedición y editores de páginas web usan el
-            Lorem Ipsum como su texto por defecto, y al hacer una búsqueda de
-            "Lorem Ipsum" va a dar por resultado muchos sitios web que usan este
-            texto si se encuentran en estado de desarrollo. Muchas versiones han
-            evolucionado a través de los años, algunas veces por accidente,
-            otras veces a propósito (por ejemplo insertándole humor y cosas por
-            el estilo)
-            <br></br>
-            <Button className={classes.Paper_Button} color="inherit">
-              Ver Estandares
-            </Button>
-          </Paper>
-        </Grid>
-        <Grid item xs={6}>
-          <Paper className={classes.paper}>
-            ¿Por qué lo usamos? Es un hecho establecido hace demasiado tiempo
-            que un lector se distraerá con el contenido del texto de un sitio
-            mientras que mira su diseño. El punto de usar Lorem Ipsum es que
-            tiene una distribución más o menos normal de las letras, al
-            contrario de usar textos como por ejemplo "Contenido aquí, contenido
-            aquí". Estos textos hacen parecerlo un español que se puede leer.
-            Muchos paquetes de autoedición y editores de páginas web usan el
-            Lorem Ipsum como su texto por defecto, y al hacer una búsqueda de
-            "Lorem Ipsum" va a dar por resultado muchos sitios web que usan este
-            texto si se encuentran en estado de desarrollo. Muchas versiones han
-            evolucionado a través de los años, algunas veces por accidente,
-            otras veces a propósito (por ejemplo insertándole humor y cosas por
-            el estilo)
-            <br></br>
-            <Button className={classes.Paper_Button} color="inherit">
-              Ver Estandares
-            </Button>
-          </Paper>
-        </Grid>
-        <Grid item xs={6}>
-          <Paper className={classes.paper}>
-            <img src="https://ruizhealytimes.com/wp-content/uploads/2018/08/gestion-conocimiento.png"></img>
-          </Paper>
-        </Grid>
-        <Grid item xs={6}>
-          <Paper className={classes.paper}>
-            <img src="https://ruizhealytimes.com/wp-content/uploads/2018/08/gestion-conocimiento.png"></img>
-          </Paper>
-        </Grid>
-        <Grid item xs={6}>
-          <Paper className={classes.paper}>
-            ¿Por qué lo usamos? Es un hecho establecido hace demasiado tiempo
-            que un lector se distraerá con el contenido del texto de un sitio
-            mientras que mira su diseño. El punto de usar Lorem Ipsum es que
-            tiene una distribución más o menos normal de las letras, al
-            contrario de usar textos como por ejemplo "Contenido aquí, contenido
-            aquí". Estos textos hacen parecerlo un español que se puede leer.
-            Muchos paquetes de autoedición y editores de páginas web usan el
-            Lorem Ipsum como su texto por defecto, y al hacer una búsqueda de
-            "Lorem Ipsum" va a dar por resultado muchos sitios web que usan este
-            texto si se encuentran en estado de desarrollo. Muchas versiones han
-            evolucionado a través de los años, algunas veces por accidente,
-            otras veces a propósito (por ejemplo insertándole humor y cosas por
-            el estilo)
-            <br></br>
-            <Button className={classes.Paper_Button} color="inherit">
-              Ver Estandares
-            </Button>
-          </Paper>
-        </Grid>
-      </Grid>
+      <br></br>
+      <br></br>
+      <PGR post={mainFeaturedPost1} />
+      <PGR post={mainFeaturedPost2} />
+      <PGR post={mainFeaturedPost3} />
+      <PGR post={mainFeaturedPost4} />
+
+      <br></br>
+      <br></br>
+      <br></br>
+      <br></br>
     </div>
   );
 }
