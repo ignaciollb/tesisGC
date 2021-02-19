@@ -5,7 +5,8 @@ import Footer from "./Vistas/Footer";
 import Nav from "./Vistas/Nav";
 import Landing from "./Vistas/Landing";
 import Subdimension from "./Vistas/Subdimensiones";
-import Estandares from "./Vistas/Estandares";
+import Estandares from "./Vistas/Estandares_PGR";
+
 import {
   BrowserRouter as Router,
   Switch,
@@ -15,8 +16,25 @@ import {
 } from "react-router-dom";
 import Login from './Vistas/Login.js'
 import Menu from './Vistas/Menu.js'
-import {ProtectedRoute} from './protectedRoute'
+import axios from 'axios';
+
+import { ProtectedRoute } from "./protectedRoute";
 function App() {
+
+  // function isLogued(view){
+  //   axios.
+  //     get("http://localhost:9000/api/usuarioInfo")
+  //     .then(
+  //       (response) =>{
+  //         if(response.data == "Tienes que hacer login"){
+  //           alert("Tienes que iniciar sesion")
+  //           return <Redirect to="/login"/>
+  //         }else{
+  //           return view
+  //         }
+  //       }
+  //     )
+  // }
 
   return (
     <Router>
@@ -25,7 +43,8 @@ function App() {
         <Route exact path="/login" component={Login}/>
         <ProtectedRoute exact path="/menu" component={Subdimension}/>
       </Switch>
-    </Router>
+
+  </Router>
     
   );
 }
