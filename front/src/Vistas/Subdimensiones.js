@@ -8,6 +8,7 @@ import IconButton from "@material-ui/core/IconButton";
 import MenuIcon from "@material-ui/icons/Menu";
 import Paper from "@material-ui/core/Paper";
 import Grid from "@material-ui/core/Grid";
+import axios from 'axios'
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -43,6 +44,27 @@ const useStyles = makeStyles((theme) => ({
 export default function Subdimensiones(props) {
   const classes = useStyles();
   const { title } = props;
+  function logOut(){
+    axios.post("http://localhost:9000/api/logout",{} ,{withCredentials:true})
+    .then(res=>{
+      if(res.data == "Logout exitoso"){
+        localStorage.setItem('flag','false')
+        window.location='/'
+      }
+    })  
+    .catch(err=>{
+      alert("Error, intente nuevamente")
+      console.log(err);
+    })
+  }
+
+  // const info = data => {axios.
+  //   get("http://localhost:9000/api/usuarioInfo",{withCredentials:true})
+  //   .then(
+  //     (response) =>{
+  //       console.log(response.data);
+  //     }
+  //   )}
 
   return (
     <div className={classes.root}>
@@ -54,7 +76,7 @@ export default function Subdimensiones(props) {
           <Typography variant="h6" align="left" className={classes.title}>
             {title}
           </Typography>
-          <Button color="inherit" className={classes.Nav_Button}>
+          <Button color="inherit" className={classes.Nav_Button} onClick ={logOut}>
             Logout
           </Button>
         </Toolbar>

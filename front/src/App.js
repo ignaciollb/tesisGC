@@ -21,10 +21,9 @@ function App() {
   return (
     <Router>
       <Switch>
-        <Route path="/login">
-          <Login /> 
-        </Route>
-        <ProtectedRoute exact path="/menu" component={Menu}/>
+        <Route exact path="/" component= {Landing}/>
+        <Route exact path="/login" component={Login}/>
+        <ProtectedRoute exact path="/menu" component={Subdimension}/>
       </Switch>
     </Router>
     
