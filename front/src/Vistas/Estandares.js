@@ -25,6 +25,10 @@ const useStyles = makeStyles((theme) => ({
   menu: {
     backgroundColor: "",
     color: "",
+    position: "fixed",
+    left: 0,
+    right: 0,
+    top: 0,
   },
   paper: {
     padding: theme.spacing(2),
@@ -46,8 +50,11 @@ const useStyles = makeStyles((theme) => ({
   },
   card: {
     marginTop: 40,
-    marginLeft: 10,
-    marginRight: 10,
+    marginLeft: 20,
+    marginRight: 20,
+    height: "100%",
+    display: "flex",
+    flexDirection: "column",
   },
 }));
 export default function Subdimensiones(props) {
@@ -69,8 +76,12 @@ export default function Subdimensiones(props) {
           </Button>
         </Toolbar>
       </AppBar>
+      <br></br>
+      <br></br>
+      <br></br>
+
       <Grid container spacing={3}>
-        <Grid item xs={4}>
+        <Grid item xs={12} sm={6} md={4}>
           <Card className={classes.card}>
             <CardActionArea>
               <CardMedia
@@ -98,7 +109,7 @@ export default function Subdimensiones(props) {
             </CardActions>
           </Card>
         </Grid>
-        <Grid item xs={4}>
+        <Grid item xs={12} sm={6} md={4}>
           <Card className={classes.card}>
             <CardActionArea>
               <CardMedia
@@ -126,7 +137,7 @@ export default function Subdimensiones(props) {
             </CardActions>
           </Card>
         </Grid>
-        <Grid item xs={4}>
+        <Grid item xs={12} sm={6} md={4}>
           <Card className={classes.card}>
             <CardActionArea>
               <CardMedia
@@ -154,7 +165,7 @@ export default function Subdimensiones(props) {
             </CardActions>
           </Card>
         </Grid>
-        <Grid item xs={4}>
+        <Grid item xs={12} sm={6} md={4}>
           <Card className={classes.card}>
             <CardActionArea>
               <CardMedia
@@ -182,7 +193,7 @@ export default function Subdimensiones(props) {
             </CardActions>
           </Card>
         </Grid>
-        <Grid item xs={4}>
+        <Grid item xs={12} sm={6} md={4}>
           <Card className={classes.card}>
             <CardActionArea>
               <CardMedia
@@ -210,7 +221,7 @@ export default function Subdimensiones(props) {
             </CardActions>
           </Card>
         </Grid>
-        <Grid item xs={4}>
+        <Grid item xs={12} sm={6} md={4}>
           <Card className={classes.card}>
             <CardActionArea>
               <CardMedia
@@ -238,7 +249,7 @@ export default function Subdimensiones(props) {
             </CardActions>
           </Card>
         </Grid>
-        <Grid item xs={4}>
+        <Grid item xs={12} sm={6} md={4}>
           <Card className={classes.card}>
             <CardActionArea>
               <CardMedia
@@ -266,7 +277,7 @@ export default function Subdimensiones(props) {
             </CardActions>
           </Card>
         </Grid>
-        <Grid item xs={4}>
+        <Grid item xs={12} sm={6} md={4}>
           <Card className={classes.card}>
             <CardActionArea>
               <CardMedia
@@ -294,7 +305,7 @@ export default function Subdimensiones(props) {
             </CardActions>
           </Card>
         </Grid>
-        <Grid item xs={4}>
+        <Grid item xs={12} sm={6} md={4}>
           <Card className={classes.card}>
             <CardActionArea>
               <CardMedia
@@ -322,7 +333,7 @@ export default function Subdimensiones(props) {
             </CardActions>
           </Card>
         </Grid>
-        <Grid item xs={4}>
+        <Grid item xs={12} sm={6} md={4}>
           <Card className={classes.card}>
             <CardActionArea>
               <CardMedia

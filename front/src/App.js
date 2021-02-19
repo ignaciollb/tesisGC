@@ -3,7 +3,6 @@ import "./App.css";
 import Button from "@material-ui/core/Button";
 import Footer from "./Vistas/Footer";
 import Nav from "./Vistas/Nav";
-import Landing from "./Vistas/Landing";
 import Subdimension from "./Vistas/Subdimensiones";
 import Estandares from "./Vistas/Estandares";
 import {
@@ -11,14 +10,13 @@ import {
   Switch,
   Route,
   Link,
-  Redirect
+  Redirect,
 } from "react-router-dom";
-import Login from './Vistas/Login.js'
-import Menu from './Vistas/Menu.js'
-import axios from 'axios';
+import Login from "./Vistas/Login.js";
+import Menu from "./Vistas/Menu.js";
+import axios from "axios";
 
 function App() {
-
   // function isLogued(view){
   //   axios.
   //     get("http://localhost:9000/api/usuarioInfo")
@@ -38,15 +36,24 @@ function App() {
     <Router>
       <Switch>
         <Route path="/login">
-          <Login /> 
+          <Login />
         </Route>
         <Route path="/menu">
-          <Menu /> 
+          <Menu />
+        </Route>
+        <Route path="/Estandares">
+          <Estandares />
+        </Route>
+        <Route path="/Subdimension">
+          <Subdimension />
+        </Route>
+        <Route path="/">
+          <Nav />
+
+          <Footer />
         </Route>
       </Switch>
-
-  </Router>
-    
+    </Router>
   );
 }
 

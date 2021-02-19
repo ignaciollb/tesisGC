@@ -8,7 +8,17 @@ import IconButton from "@material-ui/core/IconButton";
 import MenuIcon from "@material-ui/icons/Menu";
 import Paper from "@material-ui/core/Paper";
 import Grid from "@material-ui/core/Grid";
+import MainFeaturedPost from "./Post";
+import Footer from "./Footer";
 
+const mainFeaturedPost = {
+  title: "Title of a longer featured blog post",
+  description:
+    "Multiple lines of text that form the lede, informing new readers quickly and efficiently about what's most interesting in this post's contents.Multiple lines of text that form the lede, informing new readers quickly and efficiently about what's most interesting in this post's contents.Multiple lines of text that form the lede, informing new readers quickly and efficiently about what's most interesting in this post's contents.Multiple lines of text that form the lede, informing new readers quickly and efficiently about what's most interesting in this post's contents.Multiple lines of text that form the lede, informing new readers quickly and efficiently about what's most interesting in this post's contents.Multiple lines of text that form the lede, informing new readers quickly and efficiently about what's most interesting in this post's contents.Multiple lines of text that form the lede, informing new readers quickly and efficiently about what's most interesting in this post's contents.Multiple lines of text that form the lede, informing new readers quickly and efficiently about what's most interesting in this post's contents.",
+  image: "https://source.unsplash.com/random",
+  imgText: "main image description",
+  linkText: "Continue reading…",
+};
 const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
@@ -23,6 +33,10 @@ const useStyles = makeStyles((theme) => ({
   menu: {
     backgroundColor: "",
     color: "",
+    position: "fixed",
+    left: 0,
+    right: 0,
+    top: 0,
   },
   paper: {
     padding: theme.spacing(2),
@@ -59,86 +73,15 @@ export default function Subdimensiones(props) {
           </Button>
         </Toolbar>
       </AppBar>
-      <Grid container spacing={3}>
-        <Grid item xs={6}>
-          <Paper className={classes.paper}>
-            <img src="https://ruizhealytimes.com/wp-content/uploads/2018/08/gestion-conocimiento.png"></img>
-          </Paper>
-        </Grid>
-        <Grid item xs={6}>
-          <Paper className={classes.paper}>
-            ¿Por qué lo usamos? Es un hecho establecido hace demasiado tiempo
-            que un lector se distraerá con el contenido del texto de un sitio
-            mientras que mira su diseño. El punto de usar Lorem Ipsum es que
-            tiene una distribución más o menos normal de las letras, al
-            contrario de usar textos como por ejemplo "Contenido aquí, contenido
-            aquí". Estos textos hacen parecerlo un español que se puede leer.
-            Muchos paquetes de autoedición y editores de páginas web usan el
-            Lorem Ipsum como su texto por defecto, y al hacer una búsqueda de
-            "Lorem Ipsum" va a dar por resultado muchos sitios web que usan este
-            texto si se encuentran en estado de desarrollo. Muchas versiones han
-            evolucionado a través de los años, algunas veces por accidente,
-            otras veces a propósito (por ejemplo insertándole humor y cosas por
-            el estilo)
-            <br></br>
-            <Button className={classes.Paper_Button} color="inherit">
-              Ver Estandares
-            </Button>
-          </Paper>
-        </Grid>
-        <Grid item xs={6}>
-          <Paper className={classes.paper}>
-            ¿Por qué lo usamos? Es un hecho establecido hace demasiado tiempo
-            que un lector se distraerá con el contenido del texto de un sitio
-            mientras que mira su diseño. El punto de usar Lorem Ipsum es que
-            tiene una distribución más o menos normal de las letras, al
-            contrario de usar textos como por ejemplo "Contenido aquí, contenido
-            aquí". Estos textos hacen parecerlo un español que se puede leer.
-            Muchos paquetes de autoedición y editores de páginas web usan el
-            Lorem Ipsum como su texto por defecto, y al hacer una búsqueda de
-            "Lorem Ipsum" va a dar por resultado muchos sitios web que usan este
-            texto si se encuentran en estado de desarrollo. Muchas versiones han
-            evolucionado a través de los años, algunas veces por accidente,
-            otras veces a propósito (por ejemplo insertándole humor y cosas por
-            el estilo)
-            <br></br>
-            <Button className={classes.Paper_Button} color="inherit">
-              Ver Estandares
-            </Button>
-          </Paper>
-        </Grid>
-        <Grid item xs={6}>
-          <Paper className={classes.paper}>
-            <img src="https://ruizhealytimes.com/wp-content/uploads/2018/08/gestion-conocimiento.png"></img>
-          </Paper>
-        </Grid>
-        <Grid item xs={6}>
-          <Paper className={classes.paper}>
-            <img src="https://ruizhealytimes.com/wp-content/uploads/2018/08/gestion-conocimiento.png"></img>
-          </Paper>
-        </Grid>
-        <Grid item xs={6}>
-          <Paper className={classes.paper}>
-            ¿Por qué lo usamos? Es un hecho establecido hace demasiado tiempo
-            que un lector se distraerá con el contenido del texto de un sitio
-            mientras que mira su diseño. El punto de usar Lorem Ipsum es que
-            tiene una distribución más o menos normal de las letras, al
-            contrario de usar textos como por ejemplo "Contenido aquí, contenido
-            aquí". Estos textos hacen parecerlo un español que se puede leer.
-            Muchos paquetes de autoedición y editores de páginas web usan el
-            Lorem Ipsum como su texto por defecto, y al hacer una búsqueda de
-            "Lorem Ipsum" va a dar por resultado muchos sitios web que usan este
-            texto si se encuentran en estado de desarrollo. Muchas versiones han
-            evolucionado a través de los años, algunas veces por accidente,
-            otras veces a propósito (por ejemplo insertándole humor y cosas por
-            el estilo)
-            <br></br>
-            <Button className={classes.Paper_Button} color="inherit">
-              Ver Estandares
-            </Button>
-          </Paper>
-        </Grid>
-      </Grid>
+      <br></br>
+      <br></br>
+      <MainFeaturedPost post={mainFeaturedPost} />
+      <MainFeaturedPost post={mainFeaturedPost} />
+      <MainFeaturedPost post={mainFeaturedPost} />
+      <br></br>
+      <br></br>
+      <br></br>
+      <br></br>
     </div>
   );
 }
