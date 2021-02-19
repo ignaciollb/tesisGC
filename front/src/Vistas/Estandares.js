@@ -10,6 +10,7 @@ import CardActions from "@material-ui/core/CardActions";
 import CardContent from "@material-ui/core/CardContent";
 import CardMedia from "@material-ui/core/CardMedia";
 import Grid from "@material-ui/core/Grid";
+import axios from 'axios'
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -54,6 +55,20 @@ export default function Subdimensiones(props) {
   const classes = useStyles();
   const { title } = props;
 
+  function logOut(){
+    axios.post('http://localhost:9000/api/logout',{},{withCredentials: true})
+    .then(res=>{
+      if(res.data == "Logout exitoso"){
+        localStorage.setItem('flag','false')
+        window.location='/'
+      }
+    })
+    .catch(err=>{
+      alert("Error, intente nuevamente")
+      console.log(err);
+    })
+  }
+
   return (
     <div className={classes.root}>
       <AppBar position="static" className={classes.menu}>
@@ -64,7 +79,7 @@ export default function Subdimensiones(props) {
           <Typography variant="h6" align="left" className={classes.title}>
             {title}
           </Typography>
-          <Button color="inherit" className={classes.Nav_Button}>
+          <Button color="inherit" className={classes.Nav_Button} onClick ={logOut()}>
             Logout
           </Button>
         </Toolbar>
