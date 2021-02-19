@@ -4,7 +4,7 @@ import Button from "@material-ui/core/Button";
 import Footer from "./Vistas/Footer";
 import Nav from "./Vistas/Nav";
 import Subdimension from "./Vistas/Subdimensiones";
-import Estandares from "./Vistas/Estandares";
+import Estandares from "./Vistas/Estandares_PGR";
 
 import {
   BrowserRouter as Router,
@@ -18,11 +18,8 @@ import Login from "./Vistas/Login.js";
 import Menu from "./Vistas/Menu.js";
 import axios from "axios";
 
-
-
-import {ProtectedRoute} from './protectedRoute'
+import { ProtectedRoute } from "./protectedRoute";
 function App() {
-
   return (
     <Router>
       <Switch>
@@ -32,7 +29,7 @@ function App() {
         <Route path="/menu">
           <Menu />
         </Route>
-        <Route path="/Estandares">
+        <Route path="/Estandares_PGR">
           <Estandares />
         </Route>
         <Route path="/Subdimensiones">
@@ -42,11 +39,9 @@ function App() {
           <Nav />
           <Footer />
         </Route>
-
-        <ProtectedRoute exact path="/menu" component={Menu}/>
+        <ProtectedRoute exact path="/menu" component={Menu} />
       </Switch>
     </Router>
-    
   );
 }
 
