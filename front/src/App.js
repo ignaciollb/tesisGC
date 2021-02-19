@@ -5,6 +5,7 @@ import Footer from "./Vistas/Footer";
 import Nav from "./Vistas/Nav";
 import Subdimension from "./Vistas/Subdimensiones";
 import Estandares from "./Vistas/Estandares";
+
 import {
   BrowserRouter as Router,
   Switch,
@@ -44,12 +45,11 @@ function App() {
         <Route path="/Estandares">
           <Estandares />
         </Route>
-        <Route path="/Subdimension">
+        <Route path="/Subdimensiones">
           <Subdimension />
         </Route>
         <Route path="/">
           <Nav />
-
           <Footer />
         </Route>
       </Switch>

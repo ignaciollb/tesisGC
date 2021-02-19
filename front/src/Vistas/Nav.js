@@ -39,6 +39,9 @@ const useStyles = makeStyles((theme) => ({
     flexGrow: 1,
     marginTop: 50,
   },
+  imagen: {
+    width: 400,
+  },
 }));
 export default function ButtonAppBar(props) {
   const classes = useStyles();
@@ -62,12 +65,15 @@ export default function ButtonAppBar(props) {
         </span>
       </Typography>
       <Grid container spacing={3} className={classes.landing}>
-        <Grid item xs={6}>
+        <Grid item xs={4}>
           <Paper className={classes.paper}>
-            <img src="https://ruizhealytimes.com/wp-content/uploads/2018/08/gestion-conocimiento.png"></img>
+            <img
+              className={classes.imagen}
+              src="https://www.teahub.io/photos/full/28-288489_fondos-de-pantalla-4k.jpg"
+            ></img>
           </Paper>
         </Grid>
-        <Grid item xs={5}>
+        <Grid item xs={7}>
           <Paper className={classes.paper}>
             ¿Por qué lo usamos? Es un hecho establecido hace demasiado tiempo
             que un lector se distraerá con el contenido del texto de un sitio
