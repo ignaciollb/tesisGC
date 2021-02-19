@@ -10,7 +10,7 @@ import CardActions from "@material-ui/core/CardActions";
 import CardContent from "@material-ui/core/CardContent";
 import CardMedia from "@material-ui/core/CardMedia";
 import Grid from "@material-ui/core/Grid";
-import MainFeaturedPost from "./Post";
+import MainFeaturedPost from "./PGR";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -24,8 +24,8 @@ const useStyles = makeStyles((theme) => ({
     flexGrow: 1,
   },
   menu: {
-    backgroundColor: "",
-    color: "",
+    backgroundColor: "#243238",
+    color: "#90caf9",
     position: "fixed",
     left: 0,
     right: 0,
@@ -56,6 +56,18 @@ const useStyles = makeStyles((theme) => ({
     height: "100%",
     display: "flex",
     flexDirection: "column",
+  },
+  boton: {
+    color: "#90caf9",
+    backgroundColor: "#243238",
+    fontSize: 14,
+    marginLeft: 10,
+    fontWeight: 600,
+    letterSpacing: 0.5,
+  },
+  boton_leer: {
+    marginTop: 5,
+    color: "#000",
   },
 }));
 export default function Subdimensiones(props) {
@@ -100,10 +112,13 @@ export default function Subdimensiones(props) {
                   lineamientos de la institución e implementa una estrategia
                   efectiva para difundirlo.
                 </Typography>
+                <Button color="primary" className={classes.boton_leer}>
+                  Leer mas
+                </Button>
               </CardContent>
             </CardActionArea>
             <CardActions>
-              <Button size="small" color="primary">
+              <Button color="primary" className={classes.boton}>
                 Iniciar proceso
               </Button>
             </CardActions>
@@ -126,10 +141,13 @@ export default function Subdimensiones(props) {
                   autoevaluación que sirve de base para elaborar el plan de
                   mejoramiento.
                 </Typography>
+                <Button color="primary" className={classes.boton_leer}>
+                  Leer mas
+                </Button>
               </CardContent>
             </CardActionArea>
             <CardActions>
-              <Button size="small" color="primary">
+              <Button color="primary" className={classes.boton}>
                 Iniciar proceso
               </Button>
             </CardActions>
@@ -152,10 +170,13 @@ export default function Subdimensiones(props) {
                   define metas concretas, prioridades, responsables, plazos y
                   presupuestos.
                 </Typography>
+                <Button color="primary" className={classes.boton_leer}>
+                  Leer mas
+                </Button>
               </CardContent>
             </CardActionArea>
             <CardActions>
-              <Button size="small" color="primary">
+              <Button color="primary" className={classes.boton}>
                 Iniciar proceso
               </Button>
             </CardActions>
@@ -177,10 +198,13 @@ export default function Subdimensiones(props) {
                   El establecimiento cuenta con un sistema efectivo para
                   monitorear el cumplimiento del plan de mejoramiento.
                 </Typography>
+                <Button color="primary" className={classes.boton_leer}>
+                  Leer mas
+                </Button>
               </CardContent>
             </CardActionArea>
             <CardActions>
-              <Button size="small" color="primary">
+              <Button color="primary" className={classes.boton}>
                 Iniciar proceso
               </Button>
             </CardActions>
@@ -188,26 +212,27 @@ export default function Subdimensiones(props) {
         </Grid>
         <Grid item xs={12} sm={6} md={4}>
           <Card className={classes.card}>
-            <CardActionArea>
-              <CardMedia
-                className={classes.media}
-                image="https://source.unsplash.com/random"
-                title="Contemplative Reptile"
-              />
-              <CardContent>
-                <Typography gutterBottom variant="h5" component="h2">
-                  PGR 5
-                </Typography>
-                <Typography variant="body2" color="textSecondary" component="p">
-                  El establecimiento recopila y sistematiza continuamente los
-                  datos sobre las características, los resultados educativos,
-                  los indicadores de procesos relevantes y la satisfacción de
-                  apoderados del establecimiento.
-                </Typography>
-              </CardContent>
-            </CardActionArea>
+            <CardMedia
+              className={classes.media}
+              image="https://source.unsplash.com/random"
+              title="Contemplative Reptile"
+            />
+            <CardContent>
+              <Typography gutterBottom variant="h5" component="h2">
+                PGR 5
+              </Typography>
+              <Typography variant="body2" color="textSecondary" component="p">
+                El establecimiento recopila y sistematiza continuamente los
+                datos sobre las características, los resultados educativos, los
+                indicadores de procesos relevantes y la satisfacción de
+                apoderados del establecimiento.
+              </Typography>
+              <Button color="primary" className={classes.boton_leer}>
+                Leer mas
+              </Button>
+            </CardContent>
             <CardActions>
-              <Button size="small" color="primary">
+              <Button color="primary" className={classes.boton}>
                 Iniciar proceso
               </Button>
             </CardActions>
@@ -215,25 +240,27 @@ export default function Subdimensiones(props) {
         </Grid>
         <Grid item xs={12} sm={6} md={4}>
           <Card className={classes.card}>
-            <CardActionArea>
-              <CardMedia
-                className={classes.media}
-                image="https://source.unsplash.com/random"
-                title="Contemplative Reptile"
-              />
-              <CardContent>
-                <Typography gutterBottom variant="h5" component="h2">
-                  PGR 6
-                </Typography>
-                <Typography variant="body2" color="textSecondary" component="p">
-                  El sostenedor y el equipo directivo comprenden, analizan y
-                  utilizan los datos recopilados para tomar decisiones
-                  educativas y monitorear la gestión.
-                </Typography>
-              </CardContent>
-            </CardActionArea>
+            <CardMedia
+              className={classes.media}
+              image="https://source.unsplash.com/random"
+              title="Contemplative Reptile"
+            />
+            <CardContent>
+              <Typography gutterBottom variant="h5" component="h2">
+                PGR 6
+              </Typography>
+              <Typography variant="body2" color="textSecondary" component="p">
+                El sostenedor y el equipo directivo comprenden, analizan y
+                utilizan los datos recopilados para tomar decisiones educativas
+                y monitorear la gestión.
+                <br></br>
+                <Button color="primary" className={classes.boton_leer}>
+                  Leer mas
+                </Button>
+              </Typography>
+            </CardContent>
             <CardActions>
-              <Button size="small" color="primary">
+              <Button color="primary" className={classes.boton}>
                 Iniciar proceso
               </Button>
             </CardActions>

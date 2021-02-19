@@ -46,7 +46,7 @@ export default function FeaturedPost(props) {
             </Typography>
             <CardActionArea
               component="a"
-              href="/Estandares_PGR"
+              href="/Subdimensiones/PGR"
               className={classes.xd}
             >
               <Typography variant="subtitle1" color="primary">

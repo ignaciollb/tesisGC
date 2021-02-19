@@ -8,7 +8,7 @@ import IconButton from "@material-ui/core/IconButton";
 import MenuIcon from "@material-ui/icons/Menu";
 import Paper from "@material-ui/core/Paper";
 import Grid from "@material-ui/core/Grid";
-import MainFeaturedPost from "./Post";
+import PGR from "./PGR";
 import Footer from "./Footer";
 
 const mainFeaturedPost1 = {
@@ -103,10 +103,10 @@ export default function Subdimensiones(props) {
       </AppBar>
       <br></br>
       <br></br>
-      <MainFeaturedPost post={mainFeaturedPost1} />
-      <MainFeaturedPost post={mainFeaturedPost2} />
-      <MainFeaturedPost post={mainFeaturedPost3} />
-      <MainFeaturedPost post={mainFeaturedPost4} />
+      <PGR post={mainFeaturedPost1} />
+      <PGR post={mainFeaturedPost2} />
+      <PGR post={mainFeaturedPost3} />
+      <PGR post={mainFeaturedPost4} />
 
       <br></br>
       <br></br>

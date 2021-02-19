@@ -29,7 +29,7 @@ function App() {
         <Route path="/menu">
           <Menu />
         </Route>
-        <Route path="/Estandares_PGR">
+        <Route path="/Subdimensiones/PGR">
           <Estandares />
         </Route>
         <Route path="/Subdimensiones">
