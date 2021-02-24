@@ -14,7 +14,7 @@ const useStyles = makeStyles({
     display: "flex",
     marginTop: 70,
     marginLeft: 20,
-    marginRight: 20,
+    marginRight: 20
   },
   cardDetails: {
     flex: 1,
@@ -46,7 +46,7 @@ export default function FeaturedPost(props) {
             </Typography>
             <CardActionArea
               component="a"
-              href="/Subdimensiones/PGR"
+              href={post.ruta}
               className={classes.xd}
             >
               <Typography variant="subtitle1" color="primary">

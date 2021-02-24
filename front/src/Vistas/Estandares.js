@@ -79,7 +79,7 @@ export default function Subdimensiones(props) {
           <Typography variant="h6" align="left" className={classes.title}>
             {title}
           </Typography>
-          <Button color="inherit" className={classes.Nav_Button} onClick ={logOut()}>
+          <Button color="inherit" className={classes.Nav_Button} onClick ={logOut}>
             Logout
           </Button>
         </Toolbar>

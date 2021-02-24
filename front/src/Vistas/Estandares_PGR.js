@@ -47,7 +47,8 @@ const useStyles = makeStyles((theme) => ({
     marginTop: 20,
   },
   media: {
-    height: 140,
+    height: 320,
+    width: "100%"
   },
   card: {
     marginTop: 40,
@@ -99,7 +100,7 @@ export default function Subdimensiones(props) {
             <CardActionArea>
               <CardMedia
                 className={classes.media}
-                image="https://source.unsplash.com/random"
+                image="https://www.visa.cl/dam/VCOM/regional/lac/SPA/Default/Pymes/Notasyrecursos/planificacion-empresa800x450.jpg"
                 title="Contemplative Reptile"
               />
               <CardContent>
@@ -118,9 +119,9 @@ export default function Subdimensiones(props) {
               </CardContent>
             </CardActionArea>
             <CardActions>
-              <Button color="primary" className={classes.boton}>
+              {/* <Button color="primary" className={classes.boton}>
                 Iniciar proceso
-              </Button>
+              </Button> */}
             </CardActions>
           </Card>
         </Grid>
@@ -129,7 +130,7 @@ export default function Subdimensiones(props) {
             <CardActionArea>
               <CardMedia
                 className={classes.media}
-                image="https://source.unsplash.com/random"
+                image="https://www.visa.cl/dam/VCOM/regional/lac/SPA/Default/Pymes/Notasyrecursos/planificacion-empresa800x450.jpg"
                 title="Contemplative Reptile"
               />
               <CardContent>
@@ -146,11 +147,6 @@ export default function Subdimensiones(props) {
                 </Button>
               </CardContent>
             </CardActionArea>
-            <CardActions>
-              <Button color="primary" className={classes.boton}>
-                Iniciar proceso
-              </Button>
-            </CardActions>
           </Card>
         </Grid>
         <Grid item xs={12} sm={6} md={4}>
@@ -158,7 +154,7 @@ export default function Subdimensiones(props) {
             <CardActionArea>
               <CardMedia
                 className={classes.media}
-                image="https://source.unsplash.com/random"
+                image="https://www.visa.cl/dam/VCOM/regional/lac/SPA/Default/Pymes/Notasyrecursos/planificacion-empresa800x450.jpg"
                 title="Contemplative Reptile"
               />
               <CardContent>
@@ -176,9 +172,9 @@ export default function Subdimensiones(props) {
               </CardContent>
             </CardActionArea>
             <CardActions>
-              <Button color="primary" className={classes.boton}>
+              {/* <Button color="primary" className={classes.boton}>
                 Iniciar proceso
-              </Button>
+              </Button> */}
             </CardActions>
           </Card>
         </Grid>
@@ -187,7 +183,7 @@ export default function Subdimensiones(props) {
             <CardActionArea>
               <CardMedia
                 className={classes.media}
-                image="https://source.unsplash.com/random"
+                image="https://www.visa.cl/dam/VCOM/regional/lac/SPA/Default/Pymes/Notasyrecursos/planificacion-empresa800x450.jpg"
                 title="Contemplative Reptile"
               />
               <CardContent>
@@ -204,66 +200,67 @@ export default function Subdimensiones(props) {
               </CardContent>
             </CardActionArea>
             <CardActions>
-              <Button color="primary" className={classes.boton}>
+              {/* <Button color="primary" className={classes.boton}>
                 Iniciar proceso
-              </Button>
+              </Button> */}
             </CardActions>
           </Card>
         </Grid>
+
         <Grid item xs={12} sm={6} md={4}>
           <Card className={classes.card}>
-            <CardMedia
-              className={classes.media}
-              image="https://source.unsplash.com/random"
-              title="Contemplative Reptile"
-            />
-            <CardContent>
-              <Typography gutterBottom variant="h5" component="h2">
-                PGR 5
-              </Typography>
-              <Typography variant="body2" color="textSecondary" component="p">
-                El establecimiento recopila y sistematiza continuamente los
-                datos sobre las características, los resultados educativos, los
-                indicadores de procesos relevantes y la satisfacción de
-                apoderados del establecimiento.
-              </Typography>
-              <Button color="primary" className={classes.boton_leer}>
-                Leer mas
-              </Button>
-            </CardContent>
-            <CardActions>
-              <Button color="primary" className={classes.boton}>
-                Iniciar proceso
-              </Button>
-            </CardActions>
-          </Card>
-        </Grid>
-        <Grid item xs={12} sm={6} md={4}>
-          <Card className={classes.card}>
-            <CardMedia
-              className={classes.media}
-              image="https://source.unsplash.com/random"
-              title="Contemplative Reptile"
-            />
-            <CardContent>
-              <Typography gutterBottom variant="h5" component="h2">
-                PGR 6
-              </Typography>
-              <Typography variant="body2" color="textSecondary" component="p">
-                El sostenedor y el equipo directivo comprenden, analizan y
-                utilizan los datos recopilados para tomar decisiones educativas
-                y monitorear la gestión.
-                <br></br>
+            <CardActionArea>
+              <CardMedia
+                className={classes.media}
+                image="https://www.visa.cl/dam/VCOM/regional/lac/SPA/Default/Pymes/Notasyrecursos/planificacion-empresa800x450.jpg"
+                title="Contemplative Reptile"
+              />
+              <CardContent>
+                <Typography gutterBottom variant="h5" component="h2">
+                  PGR 5
+                </Typography>
+                <Typography variant="body2" color="textSecondary" component="p">
+                  El establecimiento recopila y sistematiza continuamente los
+                  datos sobre las características, los resultados educativos, los
+                  indicadores de procesos relevantes y la satisfacción de
+                  apoderados del establecimiento.
+                </Typography>
                 <Button color="primary" className={classes.boton_leer}>
                   Leer mas
                 </Button>
-              </Typography>
-            </CardContent>
+              </CardContent>
+            </CardActionArea>
             <CardActions>
-              <Button color="primary" className={classes.boton}>
+              {/* <Button color="primary" className={classes.boton}>
                 Iniciar proceso
-              </Button>
+              </Button> */}
             </CardActions>
+          </Card>
+        </Grid>
+  
+        <Grid item xs={12} sm={6} md={4}>
+          <Card className={classes.card}>
+            <CardActionArea href="/">
+              <CardMedia
+                className={classes.media}
+                image="https://www.visa.cl/dam/VCOM/regional/lac/SPA/Default/Pymes/Notasyrecursos/planificacion-empresa800x450.jpg"
+                title="Contemplative Reptile"
+              />
+              <CardContent>
+                <Typography gutterBottom variant="h5" component="h2">
+                  PGR 6
+                </Typography>
+                <Typography variant="body2" color="textSecondary" component="p">
+                  El sostenedor y el equipo directivo comprenden, analizan y
+                  utilizan los datos recopilados para tomar decisiones educativas
+                  y monitorear la gestión.
+                  <br></br>
+                  <Button color="primary" className={classes.boton_leer}>
+                    Leer mas
+                  </Button>
+                </Typography>
+              </CardContent>
+            </CardActionArea>
           </Card>
         </Grid>
       </Grid>

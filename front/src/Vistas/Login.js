@@ -77,7 +77,7 @@ export default function SignInSide() {
           (response) => {
               if(response.data=='Login exitoso'){
                 localStorage.setItem('flag','true')
-                window.location='/menu'
+                window.location='/subdimensiones'
               }
           }
          
