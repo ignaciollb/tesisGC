@@ -48,7 +48,7 @@ const useStyles = makeStyles((theme) => ({
   },
   media: {
     height: 320,
-    width: "100%"
+    width: "100%",
   },
   card: {
     marginTop: 40,
@@ -97,7 +97,7 @@ export default function Subdimensiones(props) {
       <Grid container spacing={3}>
         <Grid item xs={12} sm={6} md={4}>
           <Card className={classes.card}>
-            <CardActionArea>
+            <CardActionArea href="/Subdimensiones/PGR/1">
               <CardMedia
                 className={classes.media}
                 image="https://www.visa.cl/dam/VCOM/regional/lac/SPA/Default/Pymes/Notasyrecursos/planificacion-empresa800x450.jpg"
@@ -221,8 +221,8 @@ export default function Subdimensiones(props) {
                 </Typography>
                 <Typography variant="body2" color="textSecondary" component="p">
                   El establecimiento recopila y sistematiza continuamente los
-                  datos sobre las características, los resultados educativos, los
-                  indicadores de procesos relevantes y la satisfacción de
+                  datos sobre las características, los resultados educativos,
+                  los indicadores de procesos relevantes y la satisfacción de
                   apoderados del establecimiento.
                 </Typography>
                 <Button color="primary" className={classes.boton_leer}>
@@ -237,7 +237,7 @@ export default function Subdimensiones(props) {
             </CardActions>
           </Card>
         </Grid>
-  
+
         <Grid item xs={12} sm={6} md={4}>
           <Card className={classes.card}>
             <CardActionArea href="/">
@@ -252,8 +252,8 @@ export default function Subdimensiones(props) {
                 </Typography>
                 <Typography variant="body2" color="textSecondary" component="p">
                   El sostenedor y el equipo directivo comprenden, analizan y
-                  utilizan los datos recopilados para tomar decisiones educativas
-                  y monitorear la gestión.
+                  utilizan los datos recopilados para tomar decisiones
+                  educativas y monitorear la gestión.
                   <br></br>
                   <Button color="primary" className={classes.boton_leer}>
                     Leer mas
