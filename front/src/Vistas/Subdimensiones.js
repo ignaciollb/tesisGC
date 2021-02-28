@@ -8,47 +8,51 @@ import IconButton from "@material-ui/core/IconButton";
 import MenuIcon from "@material-ui/icons/Menu";
 import Paper from "@material-ui/core/Paper";
 import Grid from "@material-ui/core/Grid";
-import PGR from "./PGR";
+import Subdimension from "./Subdimension";
 import Footer from "./Footer";
 
 const mainFeaturedPost1 = {
   title: "Planificación y Gestión de Resultados (PGR)",
   description:
     "La subdimensión Planificación y Gestión de Resultados describe procedimientos y prácticas esenciales para el liderazgo y la conducción educativa. Los estándares establecen la importancia de planificar los grandes lineamientos del establecimiento y de plasmarlos en el Proyecto Educativo Institucional, así como también de diseñar el plan de mejoramiento, el cual articula el diagnóstico de la institución y las metas, acciones y medios para lograr los objetivos propuestos. Asimismo, esta subdimensión releva la recopilación, el análisis y el uso sistemático de datos como herramientas necesarias para la toma de decisiones educativas y el monitoreo de la gestión del establecimiento.",
-  image: "https://www.visa.cl/dam/VCOM/regional/lac/SPA/Default/Pymes/Notasyrecursos/planificacion-empresa800x450.jpg",
+  image:
+    "https://www.visa.cl/dam/VCOM/regional/lac/SPA/Default/Pymes/Notasyrecursos/planificacion-empresa800x450.jpg",
   imgText: "main image description",
   linkText: "Continue reading…",
-  ruta:"/Subdimensiones/PGR"
+  ruta: "/Subdimensiones/PGR",
 };
 const mainFeaturedPost2 = {
   title: "Gestión de Personal (GP)",
   description:
     "La subdimensión Gestión de Personal describe las políticas, procedimientos y prácticas que implementa el establecimiento para contar con un equipo calificado y motivado, y con un clima laboral positivo. Los estándares determinan que la gestión del personal debe considerar las prioridades del Proyecto Educativo Institucional, las necesidades pedagógicas del establecimiento y la normativa vigente",
-  image: "https://www.mineduc.cl/wp-content/uploads/sites/19/2020/03/IMG_1493.jpg",
+  image:
+    "https://www.mineduc.cl/wp-content/uploads/sites/19/2020/03/IMG_1493.jpg",
 
   imgText: "main image description",
   linkText: "Ver estandares",
-  ruta:"/Subdimensiones/GP"
+  ruta: "/Subdimensiones/GP",
 };
 const mainFeaturedPost3 = {
   title: "Gestión de Recursos Financieros (GRF)",
   description:
     "La subdimensión Gestión de Recursos Financieros describe las políticas y procedimientos implementados por el establecimiento para asegurar una administración ordenada y eficiente de todos los aspectos ligados a los recursos económicos de la institución y de las oportunidades provenientes de los programas de apoyo, alianzas y redes. Los estándares tienen por objetivo asegurar la sustentabilidad del proyecto, lo cual implica el uso eficiente y responsable de los recursos recibidos, el cumplimiento de la normativa y la obtención de beneficios provistos por los programas de apoyo disponibles y las redes existentes.",
-  image: "https://blogs.iadb.org/gestion-fiscal/wp-content/uploads/sites/6/2015/12/GFP.jpg",
+  image:
+    "https://blogs.iadb.org/gestion-fiscal/wp-content/uploads/sites/6/2015/12/GFP.jpg",
 
   imgText: "main image description",
   linkText: "Ver estandares",
-  ruta:"/Subdimensiones/GRF"
+  ruta: "/Subdimensiones/GRF",
 };
 const mainFeaturedPost4 = {
   title: "Gestión de Recursos Educativos  (GRE)",
   description:
     "La subdimensión Gestión de Recursos Educativos describe los procedimientos y prácticas que implementa el establecimiento para garantizar la adecuada provisión, organización y uso de los recursos educativos. Los estándares definen las condiciones, instalaciones y equipamientos necesarios para promover el bienestar de los estudiantes y potenciar su aprendizaje.",
-  image: "https://accioneducar.cl/wp-content/uploads/2019/02/D240CFA8-9696-4CB5-B6AF-6BD0C47346AC-700x464.jpeg",
+  image:
+    "https://accioneducar.cl/wp-content/uploads/2019/02/D240CFA8-9696-4CB5-B6AF-6BD0C47346AC-700x464.jpeg",
 
   imgText: "main image description",
   linkText: "Ver estandares",
-  ruta:"/Subdimensiones/GRE"
+  ruta: "/Subdimensiones/GRE",
 };
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -106,10 +110,10 @@ export default function Subdimensiones(props) {
       </AppBar>
       <br></br>
       <br></br>
-      <PGR post={mainFeaturedPost1}/>
-      <PGR post={mainFeaturedPost2}/>
-      <PGR post={mainFeaturedPost3} />
-      <PGR post={mainFeaturedPost4} />
+      <Subdimension post={mainFeaturedPost1} />
+      <Subdimension post={mainFeaturedPost2} />
+      <Subdimension post={mainFeaturedPost3} />
+      <Subdimension post={mainFeaturedPost4} />
       <br></br>
       <br></br>
       <br></br>

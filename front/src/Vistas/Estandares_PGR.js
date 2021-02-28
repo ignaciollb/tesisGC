@@ -10,7 +10,6 @@ import CardActions from "@material-ui/core/CardActions";
 import CardContent from "@material-ui/core/CardContent";
 import CardMedia from "@material-ui/core/CardMedia";
 import Grid from "@material-ui/core/Grid";
-import MainFeaturedPost from "./PGR";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -71,6 +70,7 @@ const useStyles = makeStyles((theme) => ({
     color: "#000",
   },
 }));
+
 export default function Subdimensiones(props) {
   const classes = useStyles();
   const { title } = props;
@@ -127,7 +127,7 @@ export default function Subdimensiones(props) {
         </Grid>
         <Grid item xs={12} sm={6} md={4}>
           <Card className={classes.card}>
-            <CardActionArea>
+            <CardActionArea href="/Subdimensiones/PGR/2">
               <CardMedia
                 className={classes.media}
                 image="https://www.visa.cl/dam/VCOM/regional/lac/SPA/Default/Pymes/Notasyrecursos/planificacion-empresa800x450.jpg"
@@ -151,7 +151,7 @@ export default function Subdimensiones(props) {
         </Grid>
         <Grid item xs={12} sm={6} md={4}>
           <Card className={classes.card}>
-            <CardActionArea>
+            <CardActionArea href="/Subdimensiones/PGR/3">
               <CardMedia
                 className={classes.media}
                 image="https://www.visa.cl/dam/VCOM/regional/lac/SPA/Default/Pymes/Notasyrecursos/planificacion-empresa800x450.jpg"
@@ -159,7 +159,7 @@ export default function Subdimensiones(props) {
               />
               <CardContent>
                 <Typography gutterBottom variant="h5" component="h2">
-                  PGR 2
+                  PGR 3
                 </Typography>
                 <Typography variant="body2" color="textSecondary" component="p">
                   El establecimiento cuenta con un plan de mejoramiento que
@@ -180,7 +180,7 @@ export default function Subdimensiones(props) {
         </Grid>
         <Grid item xs={12} sm={6} md={4}>
           <Card className={classes.card}>
-            <CardActionArea>
+            <CardActionArea href="/Subdimensiones/PGR/4">
               <CardMedia
                 className={classes.media}
                 image="https://www.visa.cl/dam/VCOM/regional/lac/SPA/Default/Pymes/Notasyrecursos/planificacion-empresa800x450.jpg"
@@ -209,7 +209,7 @@ export default function Subdimensiones(props) {
 
         <Grid item xs={12} sm={6} md={4}>
           <Card className={classes.card}>
-            <CardActionArea>
+            <CardActionArea href="/Subdimensiones/PGR/5">
               <CardMedia
                 className={classes.media}
                 image="https://www.visa.cl/dam/VCOM/regional/lac/SPA/Default/Pymes/Notasyrecursos/planificacion-empresa800x450.jpg"
@@ -240,7 +240,7 @@ export default function Subdimensiones(props) {
 
         <Grid item xs={12} sm={6} md={4}>
           <Card className={classes.card}>
-            <CardActionArea href="/">
+            <CardActionArea href="/Subdimensiones/PGR/6">
               <CardMedia
                 className={classes.media}
                 image="https://www.visa.cl/dam/VCOM/regional/lac/SPA/Default/Pymes/Notasyrecursos/planificacion-empresa800x450.jpg"
