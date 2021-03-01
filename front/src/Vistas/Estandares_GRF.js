@@ -80,7 +80,7 @@ export default function Subdimensiones(props) {
       return (
         <Grid item xs={12} sm={6} md={4}>
           <Card className={classes.card}>
-            <CardActionArea>
+            <CardActionArea href={this.props.link}>
               <CardMedia
                 className={classes.media}
                 image="https://blogs.iadb.org/gestion-fiscal/wp-content/uploads/sites/6/2015/12/GFP.jpg"
@@ -125,29 +125,35 @@ export default function Subdimensiones(props) {
 
       <Grid container spacing={3}>
         <Estandar
+          link="/Subdimensiones/GRF/1"
           numero="1"
           descripcion="El establecimiento gestiona la matrícula y la asistencia de los estudiantes.
           "
         />
         <Estandar
+          link="/Subdimensiones/GRF/2"
           numero="2"
           descripcion="El establecimiento elabora un presupuesto en función de las necesidades detectadas en el proceso de planificación, controla los gastos y coopera en la sustentabilidad de la institución."
         />
         <Estandar
+          link="/Subdimensiones/GRF/3"
           numero="3"
           descripcion="El establecimiento lleva un registro ordenado de los ingresos y gastos y, cuando corresponde, rinde cuenta del uso de los recursos. "
         />
         <Estandar
+          link="/Subdimensiones/GRF/4"
           numero="4"
           descripcion="El establecimiento vela por el cumplimiento de la normativa educacional vigente. 
           "
         />
         <Estandar
+          link="/Subdimensiones/GRF/5"
           numero="5"
           descripcion="El establecimiento gestiona su participación en los programas de apoyo y asistencia técnica disponibles y los selecciona de acuerdo con las necesidades institucionales.
           "
         />
         <Estandar
+          link="/Subdimensiones/GRF/6"
           numero="6"
           descripcion="El establecimiento conoce y utiliza las redes existentes para potenciar el Proyecto Educativo Institucional. 
           "

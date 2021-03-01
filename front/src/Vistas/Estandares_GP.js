@@ -80,7 +80,7 @@ export default function Subdimensiones(props) {
       return (
         <Grid item xs={12} sm={6} md={4}>
           <Card className={classes.card}>
-            <CardActionArea>
+            <CardActionArea href={this.props.link}>
               <CardMedia
                 className={classes.media}
                 image="https://www.mineduc.cl/wp-content/uploads/sites/19/2020/03/IMG_1493.jpg"
@@ -125,39 +125,48 @@ export default function Subdimensiones(props) {
 
       <Grid container spacing={3}>
         <Estandar
+          link="/Subdimensiones/GP/1"
           numero="1"
           descripcion="El establecimiento define los cargos y funciones del personal, y la planta cumple con los requisitos estipulados para obtener y mantener el Reconocimiento Oficial."
         />
         <Estandar
+          link="/Subdimensiones/GP/2"
           numero="2"
           descripcion="El establecimiento gestiona de manera efectiva la administración del personal."
         />
         <Estandar
+          link="/Subdimensiones/GP/3"
           numero="3"
           descripcion="El establecimiento implementa estrategias efectivas para atraer, seleccionar y retener personal competente."
         />
         <Estandar
+          link="/Subdimensiones/GP/4"
           numero="4"
           descripcion="El establecimiento cuenta con un sistema de evaluación y retroalimentación del desempeño del personal."
         />
         <Estandar
+          link="/Subdimensiones/GP/5"
           numero="5"
           descripcion="El establecimiento cuenta con personal competente según los resultados de la evaluación docente y gestiona el perfeccionamiento para que los profesores mejoren su desempeño. "
         />
         <Estandar
+          link="/Subdimensiones/GP/6"
           numero="6"
           descripcion="El establecimiento gestiona el desarrollo profesional y técnico del personal según las necesidades pedagógicas y administrativas."
         />
         <Estandar
+          link="/Subdimensiones/GP/7"
           numero="7"
           descripcion="El establecimiento implementa medidas para reconocer el trabajo del personal e incentivar el buen desempeño. "
         />
         <Estandar
+          link="/Subdimensiones/GP/8"
           numero="8"
           descripcion="El establecimiento cuenta con procedimientos justos de desvinculación.
           "
         />
         <Estandar
+          link="/Subdimensiones/GP/9"
           numero="9"
           descripcion="El establecimiento cuenta con un clima laboral positivo.
           "
