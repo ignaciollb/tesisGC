@@ -78,7 +78,10 @@ function createData(Fuente, Antecedente) {
 const rows = [
   createData(
     "Director",
-    `Registros o bases con los datos e índices del establecimiento
+    `
+    Convenios de cooperación
+    
+    
   `
   ),
 
@@ -90,12 +93,17 @@ const rows = [
   ),
   createData(
     "Equipo técnico",
-    `Entrevista o encuesta al equipo administrativo`
+    `Entrevista, encuesta o grupo focal con estudiantes`
   ),
   createData(
     "Equipo técnico",
     `
     Entrevista, encuesta o grupo focal con docentes
+    `
+  ),
+  createData(
+    "Equipo técnico",
+    `Entrevista, encuesta o grupo focal con padres y apoderados 
     `
   ),
 ];
