@@ -17,10 +17,10 @@ import axios from 'axios';
 function Copyright() {
   return (
     <Typography variant="body2" color="textSecondary" align="center">
-      {'Copyright © '}
-      <Link color="inherit" href="https://material-ui.com/">
+      {'Copyright © Hong Jin, Ignacio Llanos Berrocal '}
+      {/* <Link color="inherit" href="https://material-ui.com/">
         Your Website
-      </Link>{' '}
+      </Link>{' '} */}
       {new Date().getFullYear()}
       {'.'}
     </Typography>
@@ -62,7 +62,6 @@ const useStyles = makeStyles((theme) => ({
 export default function SignInSide() {
   const classes = useStyles();
   const {register, handleSubmit, control} = useForm()
-
   const Login = data =>{
     axios
         .post("http://localhost:9000/api/login", {
@@ -99,17 +98,6 @@ export default function SignInSide() {
 
 
   }
-
-  const info = data => {axios.
-  get("http://localhost:9000/api/usuarioInfo",{withCredentials:true})
-  .then(
-    (response) =>{
-      console.log(response.data);
-    }
-  )}
-
-
-
 
   return (
     <Grid container component="main" className={classes.root}>
@@ -149,10 +137,10 @@ export default function SignInSide() {
               inputRef = {register}
 
             />
-            <FormControlLabel
+            {/* <FormControlLabel
               control={<Checkbox inputRef={register} name ="remember" color="primary" defaultValue= {false} />}
               label="Remember me" 
-            />
+            /> */}
             <Button
               type="submit"
               fullWidth
@@ -162,16 +150,16 @@ export default function SignInSide() {
               Iniciar sesión
             </Button>
             <Grid container>
-              <Grid item xs>
+              {/* <Grid item xs>
                 <Link href="#" variant="body2">
                   Forgot password?
                 </Link>
-              </Grid>
-              <Grid item>
+              </Grid> */}
+              {/* <Grid item>
                 <Link href="#" variant="body2">
                   {"Don't have an account? Sign Up"}
                 </Link>
-              </Grid>
+              </Grid> */}
             </Grid>
             <Box mt={5}>
               <Copyright />
