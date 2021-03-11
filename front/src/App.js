@@ -41,6 +41,7 @@ import GRE_2 from "./Vistas/Estandares_GRE/2";
 import GRE_3 from "./Vistas/Estandares_GRE/3";
 import GRE_4 from "./Vistas/Estandares_GRE/4";
 import GRE_5 from "./Vistas/Estandares_GRE/5";
+import Proceso from "./Vistas/Proceso"
 import {
   BrowserRouter as Router,
   Switch,
@@ -54,6 +55,7 @@ function App() {
   return (
     <Router>
       <Switch>
+        <Route exact path="/proceso" component={Proceso} />
         <Route exact path="/" component={Login} />
         {/* <ProtectedRoute exact path="/estandares" component={Estandares} /> */}
         <ProtectedRoute exact path="/Subdimensiones" component={Subdimension} />
