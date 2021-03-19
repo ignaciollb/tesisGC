@@ -53,6 +53,15 @@ export default function FeaturedPost(props) {
                 Ver estandares
               </Typography>
             </CardActionArea>
+            <CardActionArea
+              component="a"
+              href={post.rutaM}
+              className={classes.xd}
+              target="_blank">
+              <Typography variant="subtitle1" color="primary">
+                Ver modelo
+              </Typography>
+            </CardActionArea>
           </CardContent>
         </div>
         <Hidden xsDown>

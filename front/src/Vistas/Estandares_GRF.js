@@ -93,11 +93,14 @@ export default function Subdimensiones(props) {
                 <Typography variant="body2" color="textSecondary" component="p">
                   {this.props.descripcion}
                 </Typography>
-                <Button color="primary" className={classes.boton_leer}>
-                  Leer mas
-                </Button>
               </CardContent>
             </CardActionArea>
+            <Button color="primary" className={classes.boton_leer} href={"https://lucid.app/documents/embeddedchart/2e59acc8-d025-43bb-a5b6-b1e2104e50d5"} target='_blank'>
+                    Ver modelo
+                </Button>
+                <Button color="primary" className={classes.boton_leer}href={this.props.link}>
+                    Leer mas
+              </Button>
           </Card>
         </Grid>
       );

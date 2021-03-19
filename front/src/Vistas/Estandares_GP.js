@@ -88,16 +88,19 @@ export default function Subdimensiones(props) {
               />
               <CardContent>
                 <Typography gutterBottom variant="h5" component="h2">
-                  PGR {this.props.numero}
+                  GP {this.props.numero}
                 </Typography>
                 <Typography variant="body2" color="textSecondary" component="p">
                   {this.props.descripcion}
                 </Typography>
-                <Button color="primary" className={classes.boton_leer}>
-                  Leer mas
-                </Button>
               </CardContent>
             </CardActionArea>
+              <Button color="primary" className={classes.boton_leer} href={"https://lucid.app/documents/embeddedchart/3d019ea3-0f6c-4af2-87c9-dc34c294c98e"} target='_blank'>
+                  Ver modelo
+              </Button>
+              <Button color="primary" className={classes.boton_leer}href={this.props.link}>
+                  Leer mas
+              </Button>
           </Card>
         </Grid>
       );

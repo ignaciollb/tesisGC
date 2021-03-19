@@ -16,6 +16,7 @@ const mainFeaturedPost1 = {
   imgText: "main image description",
   linkText: "Continue reading…",
   ruta: "/Subdimensiones/PGR",
+  rutaM: "https://lucid.app/documents/embeddedchart/f6f1b02b-08bd-453f-926b-23835deabe65"
 };
 const mainFeaturedPost2 = {
   title: "Gestión de Personal (GP)",
@@ -27,6 +28,8 @@ const mainFeaturedPost2 = {
   imgText: "main image description",
   linkText: "Ver estandares",
   ruta: "/Subdimensiones/GP",
+  rutaM: "https://lucid.app/documents/embeddedchart/e3119564-b647-4510-8b5e-02f8ad74df69"
+  
 };
 const mainFeaturedPost3 = {
   title: "Gestión de Recursos Financieros (GRF)",
@@ -38,6 +41,8 @@ const mainFeaturedPost3 = {
   imgText: "main image description",
   linkText: "Ver estandares",
   ruta: "/Subdimensiones/GRF",
+  rutaM: "https://lucid.app/documents/embeddedchart/8df1bbfe-33fc-45de-aa2c-80121f6f9661"
+  
 };
 const mainFeaturedPost4 = {
   title: "Gestión de Recursos Educativos  (GRE)",
@@ -49,6 +54,7 @@ const mainFeaturedPost4 = {
   imgText: "main image description",
   linkText: "Ver estandares",
   ruta: "/Subdimensiones/GRE",
+  rutaM: "https://lucid.app/documents/embeddedchart/50729a26-fb0c-47e9-bd47-86eda62aa432"
 };
 const useStyles = makeStyles((theme) => ({
   root: {
