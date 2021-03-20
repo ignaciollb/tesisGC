@@ -95,12 +95,23 @@ export default function Subdimensiones(props) {
                 </Typography>
               </CardContent>
             </CardActionArea>
-              <Button color="primary" className={classes.boton_leer} href={"https://lucid.app/documents/embeddedchart/6c429259-d153-4217-8459-d0dd74d444d3"} target='_blank'>
-                    Ver modelo
-                </Button>
-                <Button color="primary" className={classes.boton_leer}href={this.props.link}>
-                    Leer mas
-              </Button>
+            <Button
+              color="primary"
+              className={classes.boton_leer}
+              href={
+                "https://lucid.app/documents/embeddedchart/6c429259-d153-4217-8459-d0dd74d444d3"
+              }
+              target="_blank"
+            >
+              Ver modelo
+            </Button>
+            <Button
+              color="primary"
+              className={classes.boton_leer}
+              href={this.props.link}
+            >
+              Leer mas
+            </Button>
           </Card>
         </Grid>
       );
@@ -111,9 +122,6 @@ export default function Subdimensiones(props) {
     <div className={classes.root}>
       <AppBar position="static" className={classes.menu}>
         <Toolbar>
-          <Button className={classes.Nav_Button} color="inherit">
-            Mis Procesos
-          </Button>
           <Typography variant="h6" align="left" className={classes.title}>
             {title}
           </Typography>

@@ -113,9 +113,7 @@ export default function Subdimensiones(props) {
     <div className={classes.root}>
       <AppBar position="static" className={classes.menu}>
         <Toolbar>
-          <Button className={classes.Nav_Button} color="inherit">
-            Mis Procesos
-          </Button>
+          
           <Typography variant="h6" align="left" className={classes.title}>
             {title}
           </Typography>

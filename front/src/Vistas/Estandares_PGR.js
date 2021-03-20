@@ -79,9 +79,6 @@ export default function Subdimensiones(props) {
     <div className={classes.root}>
       <AppBar position="static" className={classes.menu}>
         <Toolbar>
-          <Button className={classes.Nav_Button} color="inherit">
-            Mis Procesos
-          </Button>
           <Typography variant="h6" align="left" className={classes.title}>
             {title}
           </Typography>
@@ -113,16 +110,26 @@ export default function Subdimensiones(props) {
                   lineamientos de la institución e implementa una estrategia
                   efectiva para difundirlo.
                 </Typography>
-                <Button color="primary" className={classes.boton_leer}>
-                  Leer mas
-                </Button>
               </CardContent>
             </CardActionArea>
-            <CardActions>
-              {/* <Button color="primary" className={classes.boton}>
-                Iniciar proceso
-              </Button> */}
-            </CardActions>
+
+            <Button
+              color="primary"
+              className={classes.boton_leer}
+              href={
+                "https://lucid.app/documents/embeddedchart/70841fdc-7084-46f3-883b-741441d00288"
+              }
+              target="_blank"
+            >
+              Ver modelo
+            </Button>
+            <Button
+              color="primary"
+              className={classes.boton_leer}
+              href="/Subdimensiones/PGR/1"
+            >
+              Leer mas
+            </Button>
           </Card>
         </Grid>
         <Grid item xs={12} sm={6} md={4}>
@@ -142,11 +149,25 @@ export default function Subdimensiones(props) {
                   autoevaluación que sirve de base para elaborar el plan de
                   mejoramiento.
                 </Typography>
-                <Button color="primary" className={classes.boton_leer}>
-                  Leer mas
-                </Button>
               </CardContent>
             </CardActionArea>
+            <Button
+              color="primary"
+              className={classes.boton_leer}
+              href={
+                "https://lucid.app/documents/embeddedchart/70841fdc-7084-46f3-883b-741441d00288"
+              }
+              target="_blank"
+            >
+              Ver modelo
+            </Button>
+            <Button
+              color="primary"
+              className={classes.boton_leer}
+              href="/Subdimensiones/PGR/2"
+            >
+              Leer mas
+            </Button>
           </Card>
         </Grid>
         <Grid item xs={12} sm={6} md={4}>
@@ -166,16 +187,25 @@ export default function Subdimensiones(props) {
                   define metas concretas, prioridades, responsables, plazos y
                   presupuestos.
                 </Typography>
-                <Button color="primary" className={classes.boton_leer}>
-                  Leer mas
-                </Button>
               </CardContent>
             </CardActionArea>
-            <CardActions>
-              {/* <Button color="primary" className={classes.boton}>
-                Iniciar proceso
-              </Button> */}
-            </CardActions>
+            <Button
+              color="primary"
+              className={classes.boton_leer}
+              href={
+                "https://lucid.app/documents/embeddedchart/70841fdc-7084-46f3-883b-741441d00288"
+              }
+              target="_blank"
+            >
+              Ver modelo
+            </Button>
+            <Button
+              color="primary"
+              className={classes.boton_leer}
+              href="/Subdimensiones/PGR/3"
+            >
+              Leer mas
+            </Button>
           </Card>
         </Grid>
         <Grid item xs={12} sm={6} md={4}>
@@ -194,16 +224,26 @@ export default function Subdimensiones(props) {
                   El establecimiento cuenta con un sistema efectivo para
                   monitorear el cumplimiento del plan de mejoramiento.
                 </Typography>
-                <Button color="primary" className={classes.boton_leer}>
-                  Leer mas
-                </Button>
+
               </CardContent>
             </CardActionArea>
-            <CardActions>
-              {/* <Button color="primary" className={classes.boton}>
-                Iniciar proceso
-              </Button> */}
-            </CardActions>
+            <Button
+              color="primary"
+              className={classes.boton_leer}
+              href={
+                "https://lucid.app/documents/embeddedchart/70841fdc-7084-46f3-883b-741441d00288"
+              }
+              target="_blank"
+            >
+              Ver modelo
+            </Button>
+            <Button
+              color="primary"
+              className={classes.boton_leer}
+              href="/Subdimensiones/PGR/4"
+            >
+              Leer mas
+            </Button>
           </Card>
         </Grid>
 
@@ -225,16 +265,26 @@ export default function Subdimensiones(props) {
                   los indicadores de procesos relevantes y la satisfacción de
                   apoderados del establecimiento.
                 </Typography>
-                <Button color="primary" className={classes.boton_leer}>
-                  Leer mas
-                </Button>
+          
               </CardContent>
             </CardActionArea>
-            <CardActions>
-              {/* <Button color="primary" className={classes.boton}>
-                Iniciar proceso
-              </Button> */}
-            </CardActions>
+            <Button
+              color="primary"
+              className={classes.boton_leer}
+              href={
+                "https://lucid.app/documents/embeddedchart/70841fdc-7084-46f3-883b-741441d00288"
+              }
+              target="_blank"
+            >
+              Ver modelo
+            </Button>
+            <Button
+              color="primary"
+              className={classes.boton_leer}
+              href="/Subdimensiones/PGR/5"
+            >
+              Leer mas
+            </Button>
           </Card>
         </Grid>
 
@@ -255,12 +305,27 @@ export default function Subdimensiones(props) {
                   utilizan los datos recopilados para tomar decisiones
                   educativas y monitorear la gestión.
                   <br></br>
-                  <Button color="primary" className={classes.boton_leer}>
-                    Leer mas
-                  </Button>
+               
                 </Typography>
               </CardContent>
             </CardActionArea>
+            <Button
+              color="primary"
+              className={classes.boton_leer}
+              href={
+                "https://lucid.app/documents/embeddedchart/70841fdc-7084-46f3-883b-741441d00288"
+              }
+              target="_blank"
+            >
+              Ver modelo
+            </Button>
+            <Button
+              color="primary"
+              className={classes.boton_leer}
+              href="/Subdimensiones/PGR/6"
+            >
+              Leer mas
+            </Button>
           </Card>
         </Grid>
       </Grid>
