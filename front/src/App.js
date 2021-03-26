@@ -1,9 +1,4 @@
-import logo from "./logo.svg";
 import "./App.css";
-import Button from "@material-ui/core/Button";
-import Footer from "./Vistas/Componentes/Footer";
-import Nav from "./Vistas/Componentes/Nav";
-import Landing from "./Vistas/Landing";
 import Subdimension from "./Vistas/Subdimensiones";
 // import Estandares from "./Vistas/Estandares";
 import Estandares_PGR from "./Vistas/Estandares_PGR";
@@ -46,8 +41,6 @@ import {
   BrowserRouter as Router,
   Switch,
   Route,
-  Link,
-  Redirect,
 } from "react-router-dom";
 import Login from "./Vistas/Login.js";
 import { ProtectedRoute } from "./protectedRoute";
@@ -57,7 +50,6 @@ function App() {
       <Switch>
         <Route exact path="/proceso" component={Proceso} />
         <Route exact path="/" component={Login} />
-        {/* <ProtectedRoute exact path="/estandares" component={Estandares} /> */}
         <ProtectedRoute exact path="/Subdimensiones" component={Subdimension} />
         <ProtectedRoute
           exact

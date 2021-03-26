@@ -6,6 +6,7 @@ import Typography from "@material-ui/core/Typography";
 import Button from "@material-ui/core/Button";
 import Subdimension from "./Componentes/Subdimension";
 import axios from 'axios'
+import Upbar from "./Componentes/Upbar"
 
 const mainFeaturedPost1 = {
   title: "Planificación y Gestión de Resultados (PGR)",
@@ -95,35 +96,9 @@ export default function Subdimensiones(props) {
   const classes = useStyles();
   const { title } = props;
 
-  function logOut(){
-    axios.post('http://localhost:9000/api/logout',{},{withCredentials: true})
-    .then(res=>{
-      if(res.data == "Logout exitoso"){
-        localStorage.setItem('flag','false')
-        window.location='/'
-      }
-    })
-    .catch(err=>{
-      alert("Error, intente nuevamente")
-      console.log(err);
-    })
-  }
-
   return (
     <div className={classes.root}>
-      <AppBar position="static" className={classes.menu}>
-        <Toolbar>
-          
-          <Typography variant="h6" align="left" className={classes.title}>
-            {title}
-          </Typography>
-          <Button color="inherit" className={classes.Nav_Button} onClick={logOut}>
-            Logout
-          </Button>
-        </Toolbar>
-      </AppBar>
-      <br></br>
-      <br></br>
+      <Upbar/>
       <Subdimension post={mainFeaturedPost1} />
       <Subdimension post={mainFeaturedPost2} />
       <Subdimension post={mainFeaturedPost3} />
