@@ -12,13 +12,14 @@ function guardar(req, res) {
   User.findOne({ email: req.body.email }, (err, usuarioExistente) => {
     if (usuarioExistente) {
       return res.status(400).send("Email ya registrado");
+    }else{
+      user.save((err, userStore) => {
+        if (err) res.status(500).send(`Error base de datos> ${err}`);
+        res.status(200).send({ user: userStore });
+      });
     }
   });
-  user.save((err, userStore) => {
-    if (err) res.status(500).send(`Error base de datos> ${err}`);
 
-    res.status(200).send({ user: userStore });
-  });
 }
 
 // exports.postLogin = (req,res,next)=>{
