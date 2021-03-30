@@ -80,7 +80,7 @@ const rows = [
   ),
   createData(
     "Jefe UTP",
-    `Resultados Estándares de Aprendizaje y Otros Indicadores de Calidad`
+    (<div>Resultados Estándares de Aprendizaje y <a href="https://www.curriculumnacional.cl/portal/Documentos-Curriculares/Estandares-e-indicadores-de-calidad/" target="_blank">otros estandares de calidad</a></div>)
   ),
   createData(
     "Equipo técnico",
