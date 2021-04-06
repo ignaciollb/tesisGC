@@ -4,7 +4,9 @@ import AppBar from "@material-ui/core/AppBar";
 import Toolbar from "@material-ui/core/Toolbar";
 import Typography from "@material-ui/core/Typography";
 import Button from "@material-ui/core/Button";
-import axios from 'axios'
+import axios from "axios";
+
+import Menu from "@material-ui/core/Menu";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -40,33 +42,93 @@ const useStyles = makeStyles((theme) => ({
     padding: 10,
     marginTop: 20,
   },
+  menu_button: {
+    color: "#90caf9",
+  },
+  option: {
+    color: "#4b799e",
+  },
 }));
 export default function Subdimensiones(props) {
   const classes = useStyles();
   const { title } = props;
 
-  function logOut(){
-    axios.post('http://localhost:9000/api/logout',{},{withCredentials: true})
-    .then(res=>{
-      if(res.data == "Logout exitoso"){
-        localStorage.setItem('flag','false')
-        window.location='/'
-      }
-    })
-    .catch(err=>{
-      alert("Error, intente nuevamente")
-      console.log(err);
-    })
+  const [anchorEl, setAnchorEl] = React.useState(null);
+
+  const handleClick = (event) => {
+    setAnchorEl(event.currentTarget);
+  };
+
+  const handleClose = () => {
+    setAnchorEl(null);
+  };
+
+  function logOut() {
+    axios
+      .post("http://localhost:9000/api/logout", {}, { withCredentials: true })
+      .then((res) => {
+        if (res.data == "Logout exitoso") {
+          localStorage.setItem("flag", "false");
+          window.location = "/";
+        }
+      })
+      .catch((err) => {
+        alert("Error, intente nuevamente");
+        console.log(err);
+      });
   }
 
   return (
     <div className={classes.root}>
       <AppBar position="static" className={classes.menu}>
         <Toolbar>
+          <div>
+            <Button
+              className={classes.menu_button}
+              aria-controls="simple-menu"
+              aria-haspopup="true"
+              onClick={handleClick}
+            >
+              Menu
+            </Button>
+            <Menu
+              id="simple-menu"
+              anchorEl={anchorEl}
+              keepMounted
+              open={Boolean(anchorEl)}
+              onClose={handleClose}
+            >
+              <Button className={classes.option} href="/Subdimensiones">
+                Subdimensiones
+              </Button>
+              <br></br>
+              <Button className={classes.option} href="/Subdimensiones/PGR">
+                PGR
+              </Button>
+              <br></br>
+              <Button className={classes.option} href="/Subdimensiones/GP">
+                GP
+              </Button>
+              <br></br>
+
+              <Button className={classes.option} href="/Subdimensiones/GRF">
+                GRF
+              </Button>
+              <br></br>
+
+              <Button className={classes.option} href="/Subdimensiones/GRE">
+                GRE
+              </Button>
+            </Menu>
+          </div>
           <Typography variant="h6" align="left" className={classes.title}>
             {title}
           </Typography>
-          <Button color="inherit" className={classes.Nav_Button} onClick={logOut}>
+          <Button
+            color="inherit"
+            className={classes.Nav_Button}
+            onClick={logOut}
+          >
             Logout
           </Button>
         </Toolbar>
